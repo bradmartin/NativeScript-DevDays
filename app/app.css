@@ -1,0 +1,88 @@
+﻿@import "nativescript-theme-core/css/core.light.css";
+
+/*
+The following CSS rule changes the font size of all UI
+components that have the btn class name.
+*/
+.btn {
+  font-size: 18;
+}
+
+.mdi {
+  font-family: "Material Icons", "MaterialIcons-Regular";
+}
+
+ActionBar {
+  background-color: #fff;
+}
+
+ActionBar > GridLayout {
+  background-color: #fff;
+}
+
+ActionBar > GridLayout > Image {
+  margin: 0 5 0 5;
+  stretch: aspectFit;
+}
+
+ActionBar > GridLayout > .title {
+  font-weight: bold;
+  padding: 0 0 0 15;
+  color: #333;
+  font-size: 18;
+  vertical-align: middle;
+}
+
+TabView {
+  tab-background-color: #fff;
+  android-selected-tab-highlight-color: #42adf1;
+}
+
+.tweet {
+  padding: 5 8 5 4;
+}
+
+.tweet > .username {
+  font-weight: bold;
+  color: #111;
+}
+
+.tweet > Label > FormattedString > .username {
+  font-weight: bold;
+  color: #333;
+}
+
+.tweet > Label > FormattedString > .user_handle {
+  font-size: 18;
+}
+
+.tweet > .tweet_text {
+  font-size: 14;
+  color: #333;
+}
+
+.tweet > .avatar {
+  height: 60;
+  width: 60;
+  border-radius: 30;
+  vertical-align: top;
+  padding: 4;
+  margin: 4;
+}
+
+.tweet > .tweet_image {
+  height: 130;
+  width: 100%;
+  horizontal-align: right;
+}
+
+.tweet > .action-button {
+  color: #888;
+  font-size: 13;
+  vertical-align: center;
+  text-align: left;
+  height: 40;
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 1 1 1 1;
+}
