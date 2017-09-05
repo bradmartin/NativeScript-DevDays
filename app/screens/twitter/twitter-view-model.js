@@ -6,16 +6,16 @@ let tabs;
 const tweetData = [
   {
     avatar: "~/images/yoda.jpg",
-    tweet_header: "Yoda @YodaTheJedi 5m",
+    tweet_header: "Yoda @YodaTheJedi  - 5m",
     tweet_text: "Do this, you can. Try... you must!",
-    tweet_image: "~/images/yodaLayouts.jpeg",
+    tweet_image: "~/images/kipLayouts.jpg",
     reply_count: "1",
     retweet_count: "25",
     favorite_count: "148"
   },
   {
     avatar: "~/images/brad.png",
-    tweet_header: "Brad Martin @bradwaynemartin 1h",
+    tweet_header: "Brad Martin @bradwaynemartin  - 1h",
     tweet_text: "I don't believe anything you tell me.",
     tweet_image: null,
     reply_count: "84",
@@ -24,7 +24,7 @@ const tweetData = [
   },
   {
     avatar: "~/images/joker.jpg",
-    tweet_header: "Joker @TheClownPrince 34m",
+    tweet_header: "Joker @TheClownPrince  - 34m",
     tweet_text: "If you're good at something, never do it for free.",
     reply_count: "828",
     retweet_count: "5,388",
@@ -32,7 +32,7 @@ const tweetData = [
   },
   {
     avatar: "~/images/android.jpg",
-    tweet_header: "Android @AndroidRules 23m",
+    tweet_header: "Android @AndroidRules  - 23m",
     tweet_text:
       "Android Oreo is a go kids. Enjoy the snackage and remember Android is king.",
     reply_count: "2",
@@ -41,7 +41,7 @@ const tweetData = [
   },
   {
     avatar: "~/images/buzz.jpeg",
-    tweet_header: "Buzz Lightyear @BuzzTheMan 2h",
+    tweet_header: "Buzz Lightyear @BuzzTheMan  - 2h",
     tweet_text: "I don't believe anything you tell me.",
     tweet_image: null,
     reply_count: "84",

@@ -39,7 +39,8 @@ TabView {
 }
 
 .tweet {
-  padding: 5 8 5 4;
+  margin: 5 8 5 4;
+  width: 100%;
 }
 
 .tweet > .username {
@@ -47,18 +48,18 @@ TabView {
   color: #111;
 }
 
-.tweet > Label > FormattedString > .username {
+/* .tweet > Label > FormattedString > .username {
   font-weight: bold;
   color: #333;
 }
 
 .tweet > Label > FormattedString > .user_handle {
   font-size: 18;
-}
+} */
 
 .tweet > .tweet_text {
   font-size: 14;
-  color: #333;
+  color: #222;
 }
 
 .tweet > .avatar {
@@ -72,14 +73,20 @@ TabView {
 
 .tweet > .tweet_image {
   height: 130;
-  width: 100%;
-  horizontal-align: right;
+  width: 90%;
+  margin: 1 5 1 1;
+  border-top-left-radius: 5;
+  border-top-right-radius: 5;
+  border-bottom-left-radius: 5;
+  border-bottom-right-radius: 5;
+  horizontal-align: center;
 }
 
 .tweet > .action-button {
   color: #888;
   font-size: 13;
   vertical-align: center;
+  horizontal-align: left;
   text-align: left;
   height: 40;
   background-color: transparent;
