@@ -24,25 +24,28 @@
                                 <Label row="1" col="1" colSpan="5" text="{{ tweet_text }}" class="tweet_text" textWrap="true" />
                                 <!-- TweetImage -->
                                 <Image row="2" col="1" colSpan="5" src="{{ tweet_image }}" class="tweet_image" visibility="{{ tweet_image ? 'visible' : 'collapsed' }}" stretch="aspectFill" />
-                                <!-- Tweet Buttons -->
+                                <!-- Reply Button -->
                                 <Button row="4" col="1" class="action-button" tap="{{ $parents['ListView'].onReplyTap }}">
                                     <FormattedString>
                                         <Span text="&#xE0CB; " class="mdi" verticalAlignment="stretch"></Span>
                                         <Span text="{{ reply_count }}"></Span>
                                     </FormattedString>
                                 </Button>
+                                <!-- Retweet Button -->
                                 <Button row="4" col="2" class="action-button" tap="{{ $parents['ListView'].onRetweetTap }}">
                                     <FormattedString>
                                         <Span text="&#xE028; " class="mdi"></Span>
                                         <Span text="{{ retweet_count }}"></Span>
                                     </FormattedString>
                                 </Button>
+                                <!-- Favorite Button -->
                                 <Button row="4" col="3" class="action-button" tap="{{ $parents['ListView'].onFavoriteTap }}">
                                     <FormattedString>
                                         <Span text="&#xE87E; " class="mdi"></Span>
                                         <Span text="{{ favorite_count }}"></Span>
                                     </FormattedString>
                                 </Button>
+                                <!-- Message Button -->
                                 <Button row="4" col="4" class="action-button mdi" text="&#xE0E1;" tap="{{ $parents['ListView'].onMessageTap }}" />
                             </GridLayout>
                         </ListView.itemTemplate>
