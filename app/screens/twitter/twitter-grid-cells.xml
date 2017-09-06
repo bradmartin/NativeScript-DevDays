@@ -1,0 +1,72 @@
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <Page.actionBar>
+        <ActionBar>
+            <GridLayout rows="*" columns="50, *">
+                <Image col="0" src="~/images/brad.png" />
+                <Label col="1" text="{{ pageTitle }}" class="title" />
+            </GridLayout>
+        </ActionBar>
+    </Page.actionBar>
+    <TabView id="tabView">
+        <TabView.items>
+            <TabViewItem iconSource="res://ic_home">
+                <TabViewItem.view>
+                    <!-- Tweet Feed -->
+                    <ListView items="{{ tweets }}">
+                        <ListView.itemTemplate>
+                            <GridLayout class="tweet" rows="auto, auto, auto, auto" columns="70, *, *, *, *">
+                                <!-- User Avatar -->
+                                <Image row="0" col="0" rowSpan="3" class="avatar" src="{{ avatar }}" stretch="aspectFill" />
+                                <!-- TweetHeader -->
+                                <Label row="0" col="1" colSpan="4" text="{{ tweet_header }}" />
+                                <!-- Tweet Text -->
+                                <Label row="1" col="1" colSpan="4" text="{{ tweet_text }}" class="tweet_text" textWrap="true" />
+                                <!-- TweetImage -->
+                                <Image row="2" col="1" colSpan="4" src="{{ tweet_image }}" class="tweet_image" visibility="{{ tweet_image ? 'visible' : 'collapsed' }}" stretch="fill" />
+                                <!-- Reply Button -->
+                                <Button row="3" col="1" class="action-button" tap="{{ $parents['ListView'].onReplyTap }}">
+                                    <FormattedString>
+                                        <Span text="&#xE0CB; " class="mdi" verticalAlignment="stretch"></Span>
+                                        <Span text="{{ reply_count }}"></Span>
+                                    </FormattedString>
+                                </Button>
+                                <!-- Retweet Button -->
+                                <Button row="3" col="2" class="action-button" tap="{{ $parents['ListView'].onRetweetTap }}">
+                                    <FormattedString>
+                                        <Span text="&#xE028; " class="mdi"></Span>
+                                        <Span text="{{ retweet_count }}"></Span>
+                                    </FormattedString>
+                                </Button>
+                                <!-- Favorite Button -->
+                                <Button row="3" col="3" class="action-button" tap="{{ $parents['ListView'].onFavoriteTap }}">
+                                    <FormattedString>
+                                        <Span text="&#xE87E; " class="mdi"></Span>
+                                        <Span text="{{ favorite_count }}"></Span>
+                                    </FormattedString>
+                                </Button>
+                                <!-- Message Button -->
+                                <Button row="3" col="4" class="action-button mdi" text="&#xE0E1;" tap="{{ $parents['ListView'].onMessageTap }}" />
+                            </GridLayout>
+                        </ListView.itemTemplate>
+                    </ListView>
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem iconSource="res://ic_search">
+                <TabViewItem.view>
+                    <Label text="This is the search tab." />
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem iconSource="res://ic_notifications">
+                <TabViewItem.view>
+                    <Label text="This is the notifications tab." />
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem iconSource="res://ic_email">
+                <TabViewItem.view>
+                    <Label text="This is the messages tab." />
+                </TabViewItem.view>
+            </TabViewItem>
+        </TabView.items>
+    </TabView>
+</Page>
