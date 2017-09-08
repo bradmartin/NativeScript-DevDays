@@ -3,6 +3,9 @@ const observableArrayModule = require("data/observable-array");
 const tabView = require("tns-core-modules/ui/tab-view");
 
 let tabs;
+let hiddenLayout;
+let page;
+
 const tweetData = [
   {
     avatar: "~/images/yoda.jpg",
@@ -47,20 +50,44 @@ const tweetData = [
     reply_count: "84",
     retweet_count: "2,189",
     favorite_count: "30.6k"
+  },
+  {
+    avatar: "~/images/n-logo-orange-on-white.jpg",
+    tweet_header: "nStudio @nStudio.io  - 4h",
+    tweet_text: "If you're good at something, never do it for free.",
+    reply_count: "1",
+    retweet_count: "9",
+    favorite_count: "15"
+  },
+  {
+    avatar: "~/images/android.jpg",
+    tweet_header: "Android @AndroidRules  - 5h",
+    tweet_text: "I don't know what to do anymore with all of this going on.",
+    reply_count: "0",
+    retweet_count: "2",
+    favorite_count: "5"
   }
 ];
 
 function twitterViewModel(page) {
+  // set the page
+  // page = page;
+  console.log("*** TWITTER VIEW MODEL ***");
+
   const viewModel = observable.fromObject({
     tweets: new observableArrayModule.ObservableArray(tweetData),
     pageTitle: "Home",
+    openHiddenLayout,
     onFavoriteTap,
     onReplyTap,
     onRetweetTap,
     onMessageTap
   });
 
+  console.dir(viewModel);
+
   tabs = page.getViewById("tabView");
+  hiddenLayout = page.getViewById("hiddenLayout");
 
   // set up the tab index change event to change the title in the action bar
   tabs.on(tabView.TabView.selectedIndexChangedEvent, args => {
@@ -72,6 +99,18 @@ function twitterViewModel(page) {
   return viewModel;
 }
 exports.twitterViewModel = twitterViewModel;
+
+function openHiddenLayout(args) {
+  hiddenLayout.animate({
+    target: hiddenLayout,
+    duration: 500,
+    opacity: 1,
+    translate: {
+      x: 0,
+      y: 0
+    }
+  });
+}
 
 function onReplyTap(args) {
   console.log("Reply Tap");
@@ -87,6 +126,7 @@ function onFavoriteTap(args) {
 
 function onRetweetTap(args) {
   console.log("Retweet Tap");
+  openHiddenLayout();
 }
 
 function getActionBarTitle(tabIndex) {
