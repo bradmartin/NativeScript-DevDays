@@ -1,0 +1,11 @@
+<Page 
+    xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+    <WrapLayout orientation="horizontal" itemWidth="auto" itemHeight="auto">
+        <Button text="1" backgroundColor="red" width="120" />
+        <Button text="2" backgroundColor="orange" width="200" />
+        <Button text="3" backgroundColor="yellow" width="50" />
+        <Button text="4" backgroundColor="green" width="150" />
+        <Button text="5" backgroundColor="blue" color="white" width="75" />
+        <Button text="6" backgroundColor="indigo" color="white" />
+    </WrapLayout>
+</Page>

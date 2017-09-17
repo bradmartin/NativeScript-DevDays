@@ -1,0 +1,9 @@
+<Page 
+    xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
+    <AbsoluteLayout>
+        <Label text="This is Label 1" top="10" left="90" />
+        <Label text="This is Label 2" top="200" left="100" />
+        <Label text="This is Label 3" top="400" left="200" />
+        <Label text="This is Label 4" top="140" left="40"/>
+    </AbsoluteLayout>
+</Page>

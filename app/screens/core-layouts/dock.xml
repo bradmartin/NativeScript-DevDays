@@ -1,0 +1,9 @@
+<Page 
+    xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+    <DockLayout height="100%" width="100%">
+        <Label dock="top" text="I am on TOP!" backgroundColor="red" color="white" />
+        <Label dock="bottom" text="I am on BOTTOM!" backgroundColor="yellow" color="white" />
+        <Label dock="right" text="I am on RIGHT!" backgroundColor="green" color="white" />
+        <Label dock="left" text="I am on LEFT!" backgroundColor="blue" color="white"/>
+    </DockLayout>
+</Page>

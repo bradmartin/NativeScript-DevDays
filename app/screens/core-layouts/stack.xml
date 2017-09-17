@@ -1,0 +1,18 @@
+
+
+
+<Page 
+    xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+    <StackLayout>
+        <StackLayout orientation="{{ orientation }}">
+            <Label text="Stack" />
+            <Button text="Layout" />
+        </StackLayout>
+        <Label text="{{ orientation }}" textWrap="true" class="h3 text-center" />
+        <Button text="Toggle Orientation" tap="toggleOrientation" class="btn btn-primary" />
+    </StackLayout>
+</Page>
+
+
+
+

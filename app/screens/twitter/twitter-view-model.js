@@ -1,6 +1,7 @@
 const observable = require("data/observable");
 const observableArrayModule = require("data/observable-array");
 const tabView = require("tns-core-modules/ui/tab-view");
+const frame = require("tns-core-modules/ui/frame");
 
 let tabs;
 let hiddenLayout;
@@ -122,6 +123,9 @@ function onMessageTap(args) {
 
 function onFavoriteTap(args) {
   console.log("Favorite Tap");
+  frame.topmost().navigate({
+    moduleName: "screens/core-layouts/grid"
+  });
 }
 
 function onRetweetTap(args) {
